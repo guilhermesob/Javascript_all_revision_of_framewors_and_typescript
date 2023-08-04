@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>AngularJS Example</title>
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+    </script>
+</head>
+ 
+<body>
+    <center>
+        <h1 style="color:green">
+            Angular
+        </h1>
+        <h3>AngularJS Example</h3>
+        <div ng-app="myApp"
+             ng-controller="myCtrl"
+             ng-style="gfgObj">
+            <input type="text"
+                   ng-model="comName">
+            <input type="text"
+                   ng-model="detail">
+            <br> {{comName + " "+detail }}
+        </div>
+    </center>
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+            $scope.comName = "GeeksforGeeks";
+            $scope.detail = "Learning Together!"
+            $scope.gfgObj = {
+                "color": "green",
+                "font-family": "sans-serif",
+                "font-size": "25px"
+            }
+        });
+    </script>
+</body>
+</html>
